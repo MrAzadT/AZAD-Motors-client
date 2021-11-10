@@ -2,8 +2,10 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Footer from "./components/Home/Footer/Footer";
 
 import Home from "./components/Home/Home/Home";
+import Nav from "./components/Home/Nav/Nav";
 import Login from "./components/Login/Login/Login";
 import MoreCars from "./components/MoreCars/MoreCars";
 import News from "./components/News/News";
@@ -13,32 +15,34 @@ function App() {
   return (
     <>
       <Router>
+        <Nav />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home />
           </Route>
-          <Route path="/news">
+          <Route exact path="/news">
             <News />
           </Route>
-          <Route path="/news">
+          <Route exact path="/news">
             <News />
           </Route>
-          <Route path="/moreCars">
+          <Route exact path="/moreCars">
             <MoreCars />
           </Route>
-          <Route path="/dashboard">
+          <Route exact path="/dashboard">
             <Dashboard />
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
           <Route path="/*">
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </>
   );
