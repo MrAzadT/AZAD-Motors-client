@@ -9,7 +9,7 @@ const Banner = () => {
             <h1 className="text-3xl text-white font-medium tracking-wide  md:text-4xl">
               AZAD
             </h1>
-            <h1 className="text-3xl mt-4 font-medium tracking-wide text-white md:text-4xl">
+            <h1 className="text-3xl mt-4 font-medium tracking-wide text-white  md:text-4xl">
               Find your perfect car
             </h1>
             <p className="mt-4 text-white">
