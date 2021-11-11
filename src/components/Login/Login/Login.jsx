@@ -26,18 +26,18 @@ const Login = () => {
         <br />
 
         <input
-          className="relative px-4 mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200"
+          className="relative ring-2 px-4 mt-6 border rounded-md py-2 text-lg text-white bg-green-600 hover:bg-green-200"
           type="submit"
         />
       </form>
       <h1 className="mt-3">Or</h1>
 
-      <button className="relative px-4 mt-4 border rounded-md py-2 text-lg text-white bg-green-500 hover:bg-green-200">
+      <button className="relative ring-2 px-4 mt-4 border rounded-md py-2 text-lg text-white bg-green-500 hover:bg-green-200">
         Login with Google
       </button>
       <br />
       <Link to="/signUp">
-        <button className="mt-4">Don't have an account? SignUp Now!</button>
+        <button className="mt-6">Don't have an account? SignUp Now!</button>
       </Link>
     </div>
   );

@@ -35,14 +35,13 @@ const SignUp = () => {
         <br />
 
         <input
-          className="relative px-4 mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200"
+          className="relative ring-2 px-4 mt-6 border rounded-md py-2 text-lg text-white bg-green-600 hover:bg-green-200"
           type="submit"
         />
       </form>
-      <h1 className="mt-3">Or</h1>
 
       <Link to="/login">
-        <button> have an account? Login Now!</button>
+        <button className="mt-6"> have an account? Login Now!</button>
       </Link>
     </div>
   );
