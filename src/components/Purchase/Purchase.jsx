@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Order from "../Home/Products/Order";
 
 const Purchase = () => {
   const { carDataId } = useParams();
@@ -49,14 +50,7 @@ const Purchase = () => {
         </div>
       </div>
       <div className="mt-14">
-        <input placeholder="text" type="text" />
-        <br />
-        <input placeholder="text" type="text" />
-        <br />
-        <input placeholder="text" type="text" />
-        <br />
-
-        <input placeholder="text" type="text" />
+        <Order />
       </div>
     </div>
   );
