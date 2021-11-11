@@ -19,10 +19,10 @@ const Login = () => {
     if (currentUser) {
       history.replace(from);
     }
-  });
+  }, [history, currentUser, from]);
 
   const handleGoogleLogin = () => {
-    googleSignIn({});
+    googleSignIn({ setCurrentUser, history, from });
   };
 
   return (
