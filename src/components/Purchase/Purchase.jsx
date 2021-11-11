@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Order from "../Home/Products/Order";
+import Order from "./Order";
 
 const Purchase = () => {
   const { carDataId } = useParams();
@@ -35,7 +35,7 @@ const Purchase = () => {
             <div className="p-5">
               <a href="/">
                 <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
-                  Company : {data.company}
+                  Car Name : {data.company}
                 </h5>
               </a>
               <p className="font-normal text-xl text-gray-700 mb-3">
