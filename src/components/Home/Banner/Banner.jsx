@@ -1,4 +1,5 @@
 import React from "react";
+import "./Banner.css";
 
 const Banner = () => {
   return (
@@ -31,7 +32,7 @@ const Banner = () => {
         <div className="flex items-center justify-center w-full h-96 md:w-1/2">
           <img
             alt=""
-            className="object-cover w-full h-full max-w-2xl rounded-md"
+            className="bannerImg  object-cover w-full h-full max-w-2xl rounded-md"
             src="https://res.cloudinary.com/abidazad/image/upload/v1636532159/pexels-jesse-zheng-1213294_ahmbfw.jpg"
           />
         </div>

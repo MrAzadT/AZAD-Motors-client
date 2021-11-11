@@ -1,92 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Products = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/cars")
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const newData = data.slice(0, 6);
+
   return (
     <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
-      <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-500">
-        <img
-          alt="..."
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-          className="w-full align-middle rounded-t-lg"
-        />
-        <blockquote className="relative p-8 mb-4">
-          <svg
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 583 95"
-            className="absolute left-0 w-full block h-95-px -top-94-px"
-          >
-            <polygon
-              points="-30,95 583,95 583,65"
-              className="text-pink-500 fill-current"
-            ></polygon>
-          </svg>
-          <h4 className="text-xl font-bold text-white">
-            Great for your awesome project
-          </h4>
-          <p className="text-md font-light mt-2 text-white">
-            Putting together a page has never been easier than matching together
-            pre-made components. From landing pages presentation to login areas,
-            you can easily customise and built your pages.
-          </p>
-        </blockquote>
-      </div>
-      <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-500">
-        <img
-          alt="..."
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-          className="w-full align-middle rounded-t-lg"
-        />
-        <blockquote className="relative p-8 mb-4">
-          <svg
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 583 95"
-            className="absolute left-0 w-full block h-95-px -top-94-px"
-          >
-            <polygon
-              points="-30,95 583,95 583,65"
-              className="text-pink-500 fill-current"
-            ></polygon>
-          </svg>
-          <h4 className="text-xl font-bold text-white">
-            Great for your awesome project
-          </h4>
-          <p className="text-md font-light mt-2 text-white">
-            Putting together a page has never been easier than matching together
-            pre-made components. From landing pages presentation to login areas,
-            you can easily customise and built your pages.
-          </p>
-        </blockquote>
-      </div>
-      <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-500">
-        <img
-          alt="..."
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-          className="w-full align-middle rounded-t-lg"
-        />
-        <blockquote className="relative p-8 mb-4">
-          <svg
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 583 95"
-            className="absolute left-0 w-full block h-95-px -top-94-px"
-          >
-            <polygon
-              points="-30,95 583,95 583,65"
-              className="text-pink-500 fill-current"
-            ></polygon>
-          </svg>
-          <h4 className="text-xl font-bold text-white">
-            Great for your awesome project
-          </h4>
-          <p className="text-md font-light mt-2 text-white">
-            Putting together a page has never been easier than matching together
-            pre-made components. From landing pages presentation to login areas,
-            you can easily customise and built your pages.
-          </p>
-        </blockquote>
-      </div>
+      {newData.map((item) => (
+        <div key={item.id} className="max-w-lg mx-auto text-center ">
+          <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+            <a href="/">
+              <img
+                className="rounded-t-lg rounded-lg h-72"
+                src={item.img}
+                alt=""
+              />
+            </a>
+            <div className="p-5">
+              <a href="/">
+                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
+                  Company : {item.company}
+                </h5>
+              </a>
+              <p className="font-normal text-xl text-gray-700 mb-3">
+                Model : {item.model}
+              </p>
+              <p className="font-normal text-lg text-gray-700 mb-3">
+                Price : ${item.price}
+              </p>
+              <p className="font-normal text-gray-700 mb-3">Tax : {item.tax}</p>
+              <a
+                className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                href="/"
+              >
+                Order Now
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

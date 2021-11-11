@@ -21,11 +21,12 @@ const googleSignIn = ({ setCurrentUser, history, from }) => {
     });
 };
 
-const logout = () => {
+const logout = (history, from) => {
   const auth = getAuth(app);
   signOut(auth)
     .then(() => {
       console.log("logged out");
+      history.replace(from);
     })
     .catch((error) => {
       console.log("error");
