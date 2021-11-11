@@ -10,46 +10,45 @@ import SignUp from "./components/Login/SignUp/SignUp";
 import MoreCars from "./components/MoreCars/MoreCars";
 import News from "./components/News/News";
 import NotFound from "./components/NotFound/NotFound";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
-    <>
-      <AuthProvider>
-        <Router>
-          <Nav />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route exact path="/news">
-              <News />
-            </Route>
-            <Route exact path="/news">
-              <News />
-            </Route>
-            <Route exact path="/moreCars">
-              <MoreCars />
-            </Route>
-            <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signUp">
-              <SignUp />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-          <Footer />
-        </Router>
-      </AuthProvider>
-    </>
+    <AuthProvider>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
+          <Route exact path="/moreCars">
+            <MoreCars />
+          </Route>
+          <PrivateRoute exact path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signUp">
+            <SignUp />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 
