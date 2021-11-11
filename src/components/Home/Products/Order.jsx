@@ -33,28 +33,28 @@ const Order = () => {
         <input
           //   defaultValue={currentUser.email}
           placeholder="email"
-          className="px-4 w-80 border-2 py-2 rounded-md text-sm outline-none"
+          className="px-4 w-80 ring-2 ring-green-400 border-2 py-2 rounded-md text-sm outline-none"
           {...register("email", { required: true })}
         />
         <br />
         <label className="block text-md mb-2">Email</label>
         <input
           placeholder="email"
-          className="px-4 w-80 border-2 py-2 rounded-md text-sm outline-none"
+          className="px-4 w-80 ring-green-400 ring-2 border-2 py-2 rounded-md text-sm outline-none"
+          {...register("email", { required: true })}
+        />
+        <br />
+        <label className="block  text-md mb-2">Email</label>
+        <input
+          placeholder="email"
+          className="px-4 w-80 ring-green-400 ring-2 border-2 py-2 rounded-md text-sm outline-none"
           {...register("email", { required: true })}
         />
         <br />
         <label className="block text-md mb-2">Email</label>
         <input
           placeholder="email"
-          className="px-4 w-80 border-2 py-2 rounded-md text-sm outline-none"
-          {...register("email", { required: true })}
-        />
-        <br />
-        <label className="block text-md mb-2">Email</label>
-        <input
-          placeholder="email"
-          className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+          className="px-4 w-80 ring-green-400 ring-2 border-2 py-2 rounded-md text-sm outline-none"
           {...register("email", { required: true })}
         />
         <br />

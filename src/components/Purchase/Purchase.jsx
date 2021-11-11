@@ -22,12 +22,12 @@ const Purchase = () => {
 
   return (
     <div className="grid xl:grid-cols-2 text-center mt-14 md:grid-cols-2  ">
-      <div className="grid  grid-cols-1 xl:grid-cols-1 text-center mt-14 md:grid-cols-2  ">
+      <div className="grid grid-cols-1 xl:grid-cols-1 text-center mt-14 md:grid-cols-2  ">
         <div className=" mx-auto text-center ">
-          <div className="bg-white shadow-md border border-gray-200 rounded-lg mb-5">
+          <div className="bg-white  ring-2 ring-green-400  shadow-md border border-gray-200 rounded-lg mb-5">
             <a href="/">
               <img
-                className="rounded-t-lg w-80 rounded-lgv h-60"
+                className="rounded-t-lg w-92 rounded-lgv h-60"
                 src={data.img}
                 alt=""
               />
