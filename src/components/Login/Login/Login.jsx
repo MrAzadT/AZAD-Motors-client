@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { googleSignIn } from "../../Firebase/useFirebase";
+import { AuthContext } from "./../../Context/AuthProvider";
+import { useHistory, useLocation } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
+
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+
+  let history = useHistory();
+  let location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
+
+  useEffect(() => {
+    if (currentUser) {
+      history.replace(from);
+    }
+  });
+
+  const handleGoogleLogin = () => {
+    googleSignIn({});
+  };
+
   return (
     <div className="mt-10 w-2/5 m-auto text-center ">
       <h1 className=" text-2xl my-10">Login to your account</h1>
@@ -32,7 +52,10 @@ const Login = () => {
       </form>
       <h1 className="mt-3">Or</h1>
 
-      <button className="relative ring-2 px-4 mt-4 border rounded-md py-2 text-lg text-white bg-green-500 hover:bg-green-200">
+      <button
+        onClick={handleGoogleLogin}
+        className="relative ring-2 px-4 mt-4 border rounded-md py-2 text-lg text-white bg-green-500 hover:bg-green-200"
+      >
         Login with Google
       </button>
       <br />
