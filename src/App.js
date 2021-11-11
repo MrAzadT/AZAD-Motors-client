@@ -11,6 +11,7 @@ import MoreCars from "./components/MoreCars/MoreCars";
 import News from "./components/News/News";
 import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Purchase from "./components/Purchase/Purchase";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           <Route exact path="/signUp">
             <SignUp />
           </Route>
+          <PrivateRoute exact path="/purchase/:carDataId">
+            <Purchase />
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>

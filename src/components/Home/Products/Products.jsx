@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -25,7 +26,7 @@ const Products = () => {
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <a href="/">
               <img
-                className="rounded-t-lg rounded-lg h-72"
+                className="rounded-t-lg w-72 rounded-lgv h-60"
                 src={item.img}
                 alt=""
               />
@@ -43,12 +44,12 @@ const Products = () => {
                 Price : ${item.price}
               </p>
               <p className="font-normal text-gray-700 mb-3">Tax : {item.tax}</p>
-              <a
+              <Link
                 className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
-                href="/"
+                to={`/purchase/${item._id}`}
               >
                 Order Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>
