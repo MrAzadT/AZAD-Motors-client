@@ -1,5 +1,10 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from "./firebase.config";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+} from "firebase/auth";
 
 const googleSignIn = ({ setCurrentUser, history, from }) => {
   const auth = getAuth(app);
@@ -16,4 +21,15 @@ const googleSignIn = ({ setCurrentUser, history, from }) => {
     });
 };
 
-export { googleSignIn };
+const logout = () => {
+  const auth = getAuth(app);
+  signOut(auth)
+    .then(() => {
+      console.log("logged out");
+    })
+    .catch((error) => {
+      console.log("error");
+    });
+};
+
+export { logout, googleSignIn };

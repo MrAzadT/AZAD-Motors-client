@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import { logout } from "../../Firebase/useFirebase";
+import { AuthContext } from "./../../Context/AuthProvider";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
@@ -39,19 +43,21 @@ const Nav = () => {
                   Dashboard
                 </Link>
 
-                <Link
-                  to="/login"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Login
-                </Link>
-
-                <Link
-                  to="/"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Logout
-                </Link>
+                {currentUser.email ? (
+                  <Link
+                    onClick={() => logout()}
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                  >
+                    Logout
+                  </Link>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>
