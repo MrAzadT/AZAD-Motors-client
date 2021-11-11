@@ -7,6 +7,7 @@ import Footer from "./components/Home/Footer/Footer";
 import Home from "./components/Home/Home/Home";
 import Nav from "./components/Home/Nav/Nav";
 import Login from "./components/Login/Login/Login";
+import SignUp from "./components/Login/SignUp/SignUp";
 import MoreCars from "./components/MoreCars/MoreCars";
 import News from "./components/News/News";
 import NotFound from "./components/NotFound/NotFound";
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/signUp">
+            <SignUp />
           </Route>
           <Route path="*">
             <NotFound />

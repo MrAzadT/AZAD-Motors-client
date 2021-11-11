@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="flex flex-col items-center w-full md:flex-row md:w-1/2">
           <div className="max-w-lg md:mx-12 md:order-2">
             <h1 className="text-3xl text-white font-medium tracking-wide  md:text-4xl">
-              AZAD
+              AZAD Motors
             </h1>
             <h1 className="text-3xl mt-4 font-medium tracking-wide text-white  md:text-4xl">
               Find your perfect car

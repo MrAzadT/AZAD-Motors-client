@@ -6,7 +6,7 @@ const Footer = () => {
       <div class="px-4 pt-3 pb-4 border-b -mx-4 border-gray-400">
         <div class="max-w-xl mx-auto">
           <h2 class="text-xl text-left inline-block font-semibold text-gray-800">
-            AZAD
+            AZAD Motors
           </h2>
           <p class="text-gray-700 text-lg pl-px">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas dolor
