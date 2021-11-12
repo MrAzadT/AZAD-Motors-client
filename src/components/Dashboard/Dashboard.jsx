@@ -38,7 +38,9 @@ const Dashboard = () => {
 
               <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
-                  <span>Manage All Orders</span>
+                  <Link to="/manageOrder">
+                    <span>Manage All Orders</span>
+                  </Link>
                 </div>
               </div>
               <div className="text-blue-400 flex relative px-4  cursor-pointer">

@@ -8,12 +8,11 @@ const Footer = () => {
           <h2 className="text-xl text-left inline-block font-semibold text-gray-800">
             AZAD Motors
           </h2>
-          <p className="text-gray-700 text-lg pl-px">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas dolor
-            tempora explicabo possimus ea placeat dolores, quam aliquam
-            obcaecati magnam numquam sint veritatis at autem porro saepe soluta
-            cumque reprehenderit.
-          </p>
+          <p className="text-gray-700 text-sm mt-1 pl-px">Saver </p>
+          <p className="text-gray-700 text-sm mt-1 pl-px">Road : 201 </p>
+
+          <p className="text-gray-700 text-sm pl-px">Dhaka , Bangladesh</p>
+          <p className="text-gray-700 text-lg mt-5 pl-px">CONTACT US</p>
           <form action="#" className="mt-2">
             <div className="flex items-center">
               <input

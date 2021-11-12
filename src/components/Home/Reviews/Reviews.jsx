@@ -38,7 +38,7 @@ const Reviews = () => {
                   />
                   {item.review}
                   <img
-                    className=" w-10 mx-40"
+                    className=" w-10 mx-48"
                     src="https://res.cloudinary.com/abidazad/image/upload/v1636736312/double-quotes_2_bsyo9l.png"
                     alt=""
                   />

@@ -21,8 +21,10 @@ const Products = () => {
 
   return (
     <>
-      <h1 className=" text-4xl text-center mt-16 font-bold">OUE PRODUCTS</h1>
-      <hr className=" border-2 w-72 rounded-lg mt-3 border-green-600 m-auto" />
+      <h1 className=" text-4xl text-center mt-16 font-bold">
+        BUYING YOUR DREAM CAR
+      </h1>
+      <hr className=" border-2 w-5/12 rounded-lg mt-3 border-green-600 m-auto" />
       <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
         {newData.map((item) => (
           <div key={item.id} className="max-w-lg mx-auto text-center ">
