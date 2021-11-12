@@ -14,6 +14,7 @@ import News from "./components/News/News";
 import NotFound from "./components/NotFound/NotFound";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Purchase from "./components/Purchase/Purchase";
+import AddProduct from "./components/Dashboard/Dashboard/AddProduct";
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/myOrders">
             <MyOrder />
+          </PrivateRoute>
+          <PrivateRoute exact path="/addProduct">
+            <AddProduct />
           </PrivateRoute>
           <Route path="*">
             <NotFound />
