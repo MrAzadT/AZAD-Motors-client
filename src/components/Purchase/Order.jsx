@@ -36,6 +36,20 @@ const Order = () => {
           {...register("name", { required: true })}
         />
         <br />
+        <label className="block mt-3 text-md mb-2">Address</label>
+        <input
+          placeholder="address"
+          className="px-4 w-80 ring-2 ring-green-400 border-2 py-2 rounded-md text-sm outline-none"
+          {...register("address", { required: true })}
+        />
+        <br />
+        <label className="block mt-3 text-md mb-2">Phone Number</label>
+        <input
+          placeholder="phone number"
+          className="px-4 w-80 ring-2 ring-green-400 border-2 py-2 rounded-md text-sm outline-none"
+          {...register("phone", { required: true })}
+        />
+        <br />
         <label className="block mt-3 text-md mb-2">Email</label>
         <input
           placeholder="email"
@@ -61,7 +75,7 @@ const Order = () => {
         {errors.exampleRequired && <span>This field is required</span>}
         <br />
         <input
-          className="mt-4 px-4 ring-2 ring-green-500 py-2 border-2  rounded-lg bg-green-400 text-white"
+          className="mt-4 cursor-pointer px-4 ring-2 ring-green-500 py-2 border-2  rounded-lg bg-green-400 text-white"
           type="submit"
         />
       </form>

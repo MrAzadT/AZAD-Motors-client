@@ -48,7 +48,7 @@ const Products = () => {
                 className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                 to={`/purchase/${item._id}`}
               >
-                Order Now
+                Purchase
               </Link>
             </div>
           </div>
