@@ -30,7 +30,9 @@ const Dashboard = () => {
 
               <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
-                  <span>Review</span>
+                  <Link to="/review">
+                    <span>Review</span>
+                  </Link>
                 </div>
               </div>
 

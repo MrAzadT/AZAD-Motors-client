@@ -21,19 +21,17 @@ const MoreCars = () => {
       {data.map((item) => (
         <div key={item.id} className="max-w-lg mx-auto text-center ">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-            <a href="/">
-              <img
-                className="rounded-t-lg w-72 rounded-lgv h-60"
-                src={item.img}
-                alt=""
-              />
-            </a>
+            <img
+              className="rounded-t-lg w-72 rounded-lgv h-60"
+              src={item.img}
+              alt=""
+            />
+
             <div className="p-5">
-              <a href="/">
-                <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
-                  Car Name : {item.company}
-                </h5>
-              </a>
+              <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
+                Car Name : {item.company}
+              </h5>
+
               <p className="font-normal text-xl text-gray-700 mb-3">
                 Model : {item.model}
               </p>

@@ -5,9 +5,9 @@ const TopModels = () => {
   return (
     <>
       <h1 className="text-center  text-4xl mt-14 mb-3 font-bold ">
-        The Most Iconic Cars
+        THE MOST ICONIC CARS
       </h1>
-      <hr className="border-2 w-80 m-auto mb-10 border-red-400" />
+      <hr className="border-2 w-4/12 m-auto mb-10 border-red-400" />
       <div className=" w-5/6 m-auto ">
         <div className="gallery">
           <figure className="gallery__item gallery__item--1">
