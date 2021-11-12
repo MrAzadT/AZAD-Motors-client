@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthProvider from "./components/Context/AuthProvider";
 import Dashboard from "./components/Dashboard/Dashboard";
+import MyOrder from "./components/Dashboard/Dashboard/MyOrder";
+import Pay from "./components/Dashboard/Dashboard/Pay";
 import Footer from "./components/Home/Footer/Footer";
 import Home from "./components/Home/Home/Home";
 import Nav from "./components/Home/Nav/Nav";
@@ -45,6 +47,12 @@ function App() {
           </Route>
           <PrivateRoute exact path="/purchase/:carDataId">
             <Purchase />
+          </PrivateRoute>
+          <PrivateRoute exact path="/pay">
+            <Pay />
+          </PrivateRoute>
+          <PrivateRoute exact path="/myOrders">
+            <MyOrder />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

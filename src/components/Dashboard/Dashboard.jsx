@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="flex min-h-screen">
-      <nav className="w-64 flex-shrink-0">
+    <div className="flex w-40 lg:w-64  min-h-screen">
+      <nav className="w-40 lg:w-64 flex-shrink-0">
         <div className="flex-auto bg-gray-900 h-full">
           <div className="flex flex-col overflow-y-auto">
             <ul className="relative m-0 p-0 list-none h-full">
@@ -11,48 +12,45 @@ const Dashboard = () => {
                 Dashboard
               </li>
 
-              <div className="text-blue-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
-                  <span>Pay</span>
+                  <Link to="/pay">
+                    <span>Pay</span>
+                  </Link>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
-                  <span>My Orders</span>
+                  <Link to="/myOrders">
+                    <span>My Orders</span>
+                  </Link>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Review</span>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Manage All Orders</span>
                 </div>
               </div>
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Add A Product</span>
                 </div>
               </div>
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Make Admin</span>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4 hover:bg-gray-700 cursor-pointer">
-                <div className="mr-4 my-auto"></div>
+              <div className="text-gray-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Logout</span>
                 </div>
