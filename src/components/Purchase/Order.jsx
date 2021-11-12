@@ -13,10 +13,9 @@ const Order = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    //Filtering
     data.email = currentUser.email;
     axios
-      .post("https://dreadful-blood-69167.herokuapp.com/orders", data)
+      .post("http://localhost:5000/orders", data)
       .then((res) => {
         console.log(res);
       })
@@ -32,7 +31,6 @@ const Order = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className="block mt-3 text-md mb-2">Name</label>
         <input
-          //   defaultValue={currentUser.email}
           placeholder="name"
           className="px-4 w-80 ring-2 ring-green-400 border-2 py-2 rounded-md text-sm outline-none"
           {...register("name", { required: true })}

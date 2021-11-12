@@ -45,6 +45,9 @@ const Purchase = () => {
                 Price : ${data.price}
               </p>
               <p className="font-normal text-gray-700 mb-3">Tax : {data.tax}</p>
+              <p className="font-normal text-gray-700  w-72 m-auto">
+                Details : {data.dis}
+              </p>
             </div>
           </div>
         </div>
