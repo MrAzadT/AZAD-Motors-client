@@ -13,7 +13,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    data.email = currentUser.email;
+    // data.email = currentUser.email;
     axios
       .post("http://localhost:5000/cars", data)
       .then((res) => {
@@ -64,11 +64,18 @@ const AddProduct = () => {
           {...register("model", { required: true })}
         />
         <br />
+        <label className="block mt-3 text-md mb-2">Details</label>
+        <input
+          placeholder="details"
+          className="px-4 w-80 ring-green-400 ring-2 border-2 py-2 rounded-md text-sm outline-none"
+          {...register("dis", { required: true })}
+        />
+        <br />
 
         {errors.exampleRequired && <span>This field is required</span>}
         <br />
         <input
-          className="mt-4 px-4 ring-2 ring-green-500 py-2 border-2  rounded-lg bg-green-400 text-white"
+          className="mt-4 cursor-pointer px-4 ring-2 ring-green-500 py-2 border-2  rounded-lg bg-green-400 text-white"
           type="submit"
         />
       </form>
