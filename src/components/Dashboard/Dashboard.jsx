@@ -20,7 +20,7 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <Link to="/myOrders">
                     <span>My Orders</span>
@@ -28,29 +28,29 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Review</span>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Manage All Orders</span>
                 </div>
               </div>
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Add A Product</span>
                 </div>
               </div>
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Make Admin</span>
                 </div>
               </div>
 
-              <div className="text-gray-400 flex relative px-4  cursor-pointer">
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
                   <span>Logout</span>
                 </div>
