@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className=" bg-primary">
+    <div className=" bg-secondary">
       <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 md:h-128 md:py-16 md:flex-row md:items-center md:space-x-6">
         <div className="flex flex-col items-center w-full md:flex-row md:w-1/2">
           <div className="max-w-lg md:mx-12 md:order-2">
@@ -21,9 +21,9 @@ const Banner = () => {
             <div className="mt-8 w-40">
               <Link
                 to="/moreCars"
-                className="block ring-2  ring-indigo-300 px-5 text-lg py-3 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md md:inline hover:bg-blue-400"
+                className="block ring-2  ring-gray-500 px-5 text-lg py-3 font-semibold text-center text-white transition-colors duration-200 transform rounded-md md:inline bg-primary  hover:bg-white hover:text-black"
               >
-                Check Now
+                CHECK NOW
               </Link>
             </div>
           </div>

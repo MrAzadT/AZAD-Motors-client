@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ManageOrders = () => {
   const [data, setData] = useState([]);
-  // const [orderChange, setOrderChanged] = useState(false);
+  const [orderChange, setOrderChanged] = useState(false);
 
   useEffect(() => {
     axios
@@ -15,19 +15,19 @@ const ManageOrders = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [orderChange]);
 
-  // const handleDelete = (id) => {
-  //   axios
-  //     .get(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
-  //     .then((res) => {
-  //       console.log(res);
-  //       setOrderChanged((prev) => !prev);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+  const handleDelete = (id) => {
+    axios
+      .delete(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
+      .then((res) => {
+        console.log(res);
+        setOrderChanged((prev) => !prev);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -57,9 +57,9 @@ const ManageOrders = () => {
                 </p>
                 <button
                   className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
-                  // onClick={() => handleDelete(item._id)}
+                  onClick={() => handleDelete(item._id)}
                 >
-                  Delete
+                  DELETE
                 </button>
               </div>
             </div>

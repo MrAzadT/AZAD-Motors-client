@@ -1,10 +1,8 @@
 import axios from "axios";
-import React, { useContext } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../../Context/AuthProvider";
 
 const AddProduct = () => {
-  const { currentUser } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -13,7 +11,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // data.email = currentUser.email;
+
     axios
       .post("https://limitless-temple-20432.herokuapp.com/cars", data)
       .then((res) => {

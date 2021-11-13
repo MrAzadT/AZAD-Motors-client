@@ -24,7 +24,7 @@ const Products = () => {
       <h1 className=" text-4xl text-center mt-16 font-bold">
         BUYING YOUR DREAM CAR
       </h1>
-      <hr className=" border-2 w-5/12 rounded-lg mt-3 border-green-600 m-auto" />
+      <hr className=" border-2 w-5/12 rounded-lg mt-3 border-primary m-auto" />
       <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
         {newData.map((item) => (
           <div key={item.id} className=" w-80 mx-auto text-center ">
@@ -50,10 +50,10 @@ const Products = () => {
                   Tax : {item.tax}
                 </p>
                 <Link
-                  className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4  font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                  className="text-white ring-2 bg-primary  hover:bg-white hover:text-black ring-gray-500   focus:ring-4  font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                   to={`/purchase/${item._id}`}
                 >
-                  Purchase
+                  PURCHASE
                 </Link>
               </div>
             </div>

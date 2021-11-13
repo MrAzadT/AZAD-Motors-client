@@ -2,17 +2,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-300 w-full py-6 px-4 my-32 ">
+    <footer className="bg-primary w-full py-6 px-4 my-32 ">
       <div className="px-4 pt-3 pb-4 border-b -mx-4 border-gray-400">
         <div className="max-w-xl mx-auto">
-          <h2 className="text-xl text-left inline-block font-semibold text-gray-800">
+          <h2 className="text-xl text-left inline-block font-semibold text-white">
             AZAD Motors
           </h2>
-          <p className="text-gray-700 text-sm mt-1 pl-px">Saver </p>
-          <p className="text-gray-700 text-sm mt-1 pl-px">Road : 201 </p>
+          <p className="text-white text-sm mt-1 pl-px">Saver </p>
+          <p className="text-white text-sm mt-1 pl-px">Road : 201 </p>
 
-          <p className="text-gray-700 text-sm pl-px">Dhaka , Bangladesh</p>
-          <p className="text-gray-700 text-lg mt-5 pl-px">CONTACT US</p>
+          <p className="text-white text-sm pl-px">Dhaka , Bangladesh</p>
+          <p className="text-white text-lg mt-5 pl-px">CONTACT US</p>
           <form action="#" className="mt-2">
             <div className="flex items-center">
               <input
@@ -21,10 +21,10 @@ const Footer = () => {
                 required
               />
               <button
-                className="bg-blue-600 text-gray-200 px-5 py-2 rounded shadow "
+                className="bg-primary ring-2 ring-gray-600 text-white  hover:bg-white hover:text-black px-5 py-2 rounded shadow "
                 style={{ marginLeft: `-7.8rem` }}
               >
-                Sign Up
+                SIGN UP
               </button>
             </div>
           </form>

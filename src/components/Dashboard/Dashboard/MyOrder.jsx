@@ -23,7 +23,7 @@ const MyOrder = () => {
 
   const handleDelete = (id) => {
     axios
-      .get(`http://localhost:5000/orderDelete/${id}`)
+      .delete(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
       .then((res) => {
         console.log(res);
         setOrderChanged((prev) => !prev);
@@ -63,7 +63,7 @@ const MyOrder = () => {
                   className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                   onClick={() => handleDelete(item._id)}
                 >
-                  Delete
+                  DELETE
                 </button>
               </div>
             </div>

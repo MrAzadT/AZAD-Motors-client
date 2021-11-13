@@ -21,7 +21,7 @@ const Reviews = () => {
       <h1 className=" text-4xl text-center mt-16 font-bold">
         CUSTOMER REVIEWS
       </h1>
-      <hr className=" border-2 w-4/12 rounded-lg mt-3 border-green-600 m-auto" />
+      <hr className=" border-2 w-4/12 rounded-lg mt-3 border-primary m-auto" />
       <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
         {data.map((item) => (
           <div key={item._id} className=" w-72 mx-auto text-center ">

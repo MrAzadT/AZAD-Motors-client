@@ -6,6 +6,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 
 const googleSignIn = ({ setCurrentUser, history, from }) => {
@@ -35,14 +36,29 @@ const logout = (history, from) => {
     });
 };
 
-const signUpWithEmailPassword = (email, password, setCurrentUser) => {
+const signUpWithEmailPassword = (
+  email,
+  password,
+  name,
+  setCurrentUser,
+  history
+) => {
   const auth = getAuth(app);
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      setCurrentUser(user);
-      console.log(user);
+      updateProfile(auth.currentUser, {
+        displayName: name,
+      })
+        .then(() => {
+          setCurrentUser(user);
+          console.log(user);
+          history.push("/login");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     })
     .catch((error) => {
       const errorMessage = error.message;

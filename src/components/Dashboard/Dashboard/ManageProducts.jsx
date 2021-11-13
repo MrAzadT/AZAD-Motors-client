@@ -3,6 +3,7 @@ import axios from "axios";
 
 const ManageProducts = () => {
   const [data, setData] = useState([]);
+  const [orderChange, setOrderChanged] = useState(false);
 
   useEffect(() => {
     axios
@@ -14,7 +15,21 @@ const ManageProducts = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [orderChange]);
+
+  const handleDelete = (id) => {
+    axios
+      .delete(
+        `https://limitless-temple-20432.herokuapp.com/productDelete/${id}`
+      )
+      .then((res) => {
+        console.log(res);
+        setOrderChanged((prev) => !prev);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -42,7 +57,10 @@ const ManageProducts = () => {
                 <p className="font-normal text-gray-700 mb-3">
                   Tax : {item.tax}
                 </p>
-                <button className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4  font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
+                <button
+                  onClick={() => handleDelete(item._id)}
+                  className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4  font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                >
                   DELETE PRODUCT
                 </button>
               </div>
