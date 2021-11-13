@@ -4,6 +4,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 
 const googleSignIn = ({ setCurrentUser, history, from }) => {
@@ -33,4 +35,38 @@ const logout = (history, from) => {
     });
 };
 
-export { logout, googleSignIn };
+const signUpWithEmailPassword = (email, password, setCurrentUser) => {
+  const auth = getAuth(app);
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      setCurrentUser(user);
+      console.log(user);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+};
+
+const loginWithEmailPassword = (email, password, setCurrentUser) => {
+  const auth = getAuth(app);
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      setCurrentUser(user);
+      console.log(user);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+};
+
+export {
+  logout,
+  googleSignIn,
+  signUpWithEmailPassword,
+  loginWithEmailPassword,
+};

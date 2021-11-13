@@ -4,13 +4,21 @@ import { useForm } from "react-hook-form";
 
 const SignUp = () => {
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data) => console.log(data);
 
   return (
     <div className="mt-10 w-2/5 m-auto text-center ">
       <h1 className=" text-2xl my-10">SignUp to your account</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label className="block text-md mb-2">Email</label>
+        <label className="block text-md mb-2">Name</label>
+        <input
+          placeholder="name"
+          className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+          {...register("name", { required: true })}
+        />
+        <br />
+        <label className="block text-md mt-3 mb-2">Email</label>
         <input
           placeholder="email"
           className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
