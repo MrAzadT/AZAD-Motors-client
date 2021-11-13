@@ -20,7 +20,7 @@ const MoreCars = () => {
     <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
       {data.map((item) => (
         <div key={item.id} className=" w-80 mx-auto text-center ">
-          <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+          <div className="transform transition   hover:-translate-y-0.5 bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <img
               className="rounded-lg w-80 rounded-lgv h-60"
               src={item.img}
