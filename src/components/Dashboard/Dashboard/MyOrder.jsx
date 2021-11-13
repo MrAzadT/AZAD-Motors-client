@@ -9,7 +9,9 @@ const MyOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/orders/${currentUser.email}`)
+      .get(
+        `https://limitless-temple-20432.herokuapp.com/orders/${currentUser.email}`
+      )
       .then((res) => {
         console.log(res);
         setData(res.data);
@@ -21,7 +23,7 @@ const MyOrder = () => {
 
   const handleDelete = (id) => {
     axios
-      .get(`http://localhost:5000/orderDelete/${id}`)
+      .get(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
       .then((res) => {
         console.log(res);
         setOrderChanged((prev) => !prev);

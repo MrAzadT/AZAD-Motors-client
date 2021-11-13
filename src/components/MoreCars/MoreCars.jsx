@@ -7,7 +7,7 @@ const MoreCars = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cars")
+      .get("https://limitless-temple-20432.herokuapp.com/cars")
       .then((res) => {
         console.log(res.data);
         setData(res.data);

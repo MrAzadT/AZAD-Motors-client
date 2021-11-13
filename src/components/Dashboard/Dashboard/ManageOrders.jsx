@@ -7,7 +7,7 @@ const ManageOrders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/orders")
+      .get("https://limitless-temple-20432.herokuapp.com/orders")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,7 +19,7 @@ const ManageOrders = () => {
 
   // const handleDelete = (id) => {
   //   axios
-  //     .get(`http://localhost:5000/orderDelete/${id}`)
+  //     .get(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
   //     .then((res) => {
   //       console.log(res);
   //       setOrderChanged((prev) => !prev);

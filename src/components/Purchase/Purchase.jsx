@@ -10,7 +10,7 @@ const Purchase = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/carsData/${carDataId}`)
+      .get(`https://limitless-temple-20432.herokuapp.com/carsData/${carDataId}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data);

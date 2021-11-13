@@ -15,7 +15,7 @@ const AddProduct = () => {
     console.log(data);
     // data.email = currentUser.email;
     axios
-      .post("http://localhost:5000/cars", data)
+      .post("https://limitless-temple-20432.herokuapp.com/cars", data)
       .then((res) => {
         console.log(res);
       })
