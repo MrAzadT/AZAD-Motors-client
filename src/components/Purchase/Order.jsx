@@ -18,6 +18,7 @@ const Order = () => {
       .post("http://localhost:5000/orders", data)
       .then((res) => {
         console.log(res);
+        alert("Your Order Submit");
       })
       .catch((err) => {
         console.log(err);

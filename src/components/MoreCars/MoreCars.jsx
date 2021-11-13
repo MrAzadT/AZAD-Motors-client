@@ -19,10 +19,10 @@ const MoreCars = () => {
   return (
     <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
       {data.map((item) => (
-        <div key={item.id} className="max-w-lg mx-auto text-center ">
+        <div key={item.id} className=" w-80 mx-auto text-center ">
           <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
             <img
-              className="rounded-t-lg w-72 rounded-lgv h-60"
+              className="rounded-lg w-80 rounded-lgv h-60"
               src={item.img}
               alt=""
             />
@@ -43,7 +43,7 @@ const MoreCars = () => {
                 className="text-white ring-2 ring-blue-500 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                 to={`/purchase/${item._id}`}
               >
-                Order Now
+                Purchase
               </Link>
             </div>
           </div>
