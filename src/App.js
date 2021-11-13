@@ -17,6 +17,8 @@ import Purchase from "./components/Purchase/Purchase";
 import AddProduct from "./components/Dashboard/Dashboard/AddProduct";
 import Review from "./components/Dashboard/Dashboard/Review";
 import ManageOrders from "./components/Dashboard/Dashboard/ManageOrders";
+import MakeAdmin from "./components/Dashboard/Dashboard/MakeAdmin";
+import ManageProducts from "./components/Dashboard/Dashboard/ManageProducts";
 
 function App() {
   return (
@@ -48,23 +50,29 @@ function App() {
           <Route exact path="/signUp">
             <SignUp />
           </Route>
-          <PrivateRoute exact path="/purchase/:carDataId">
+          <PrivateRoute path="/purchase/:carDataId">
             <Purchase />
           </PrivateRoute>
-          <PrivateRoute exact path="/pay">
+          <PrivateRoute path="/pay">
             <Pay />
           </PrivateRoute>
-          <PrivateRoute exact path="/myOrders">
+          <PrivateRoute path="/myOrders">
             <MyOrder />
           </PrivateRoute>
-          <PrivateRoute exact path="/addProduct">
+          <PrivateRoute path="/addProduct">
             <AddProduct />
           </PrivateRoute>
-          <PrivateRoute exact path="/review">
+          <PrivateRoute path="/review">
             <Review />
           </PrivateRoute>
-          <PrivateRoute exact path="/manageOrder">
+          <PrivateRoute path="/manageOrder">
             <ManageOrders />
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin />
+          </PrivateRoute>
+          <PrivateRoute path="/manageProducts">
+            <ManageProducts />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

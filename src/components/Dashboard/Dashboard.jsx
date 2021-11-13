@@ -52,7 +52,16 @@ const Dashboard = () => {
               </div>
               <div className="text-blue-400 flex relative px-4  cursor-pointer">
                 <div className="flex-auto my-1">
-                  <span>Make Admin</span>
+                  <Link to="/makeAdmin">
+                    <span>Make Admin</span>
+                  </Link>
+                </div>
+              </div>
+              <div className="text-blue-400 flex relative px-4  cursor-pointer">
+                <div className="flex-auto my-1">
+                  <Link to="/manageProducts">
+                    <span>Manage Products</span>
+                  </Link>
                 </div>
               </div>
 

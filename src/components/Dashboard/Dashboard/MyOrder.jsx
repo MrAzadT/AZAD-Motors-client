@@ -23,7 +23,7 @@ const MyOrder = () => {
 
   const handleDelete = (id) => {
     axios
-      .get(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
+      .get(`http://localhost:5000/orderDelete/${id}`)
       .then((res) => {
         console.log(res);
         setOrderChanged((prev) => !prev);
