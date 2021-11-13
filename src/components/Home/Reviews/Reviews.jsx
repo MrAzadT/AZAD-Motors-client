@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Rating from "react-rating";
 
 const Reviews = () => {
   const [data, setData] = useState([]);
@@ -20,7 +21,7 @@ const Reviews = () => {
       <h1 className=" text-4xl text-center mt-16 font-bold">
         Customer Reviews
       </h1>
-      <hr className=" border-2 w-80 rounded-lg mt-3 border-green-600 m-auto" />
+      <hr className=" border-2  w-80 rounded-lg mt-3 border-green-600 m-auto" />
       <div className="grid xl:grid-cols-3 gap-10 m-auto mt-14 md:grid-cols-2 grid-cols-1 max-w-6xl">
         {data.map((item) => (
           <div key={item._id} className=" w-72 mx-auto text-center ">
@@ -44,7 +45,12 @@ const Reviews = () => {
                   />
                 </p>
                 <p className=" font-serif  text-lg text-gray-700 mb-3">
-                  Rating : {item.rating} out of 5
+                  <Rating
+                    initialRating={item.rating}
+                    emptySymbol="far fa-star text-red-600 mr-1 "
+                    fullSymbol="fas fa-star text-red-600 mr-1 "
+                    readonly
+                  />
                 </p>
               </div>
             </div>
