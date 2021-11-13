@@ -12,7 +12,7 @@ const Review = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://fathomless-woodland-69605.herokuapp.com/reviews", data)
+      .post("https://limitless-temple-20432.herokuapp.com/reviews", data)
       .then((res) => {
         console.log(res);
       })

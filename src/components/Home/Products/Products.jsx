@@ -7,7 +7,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("https://fathomless-woodland-69605.herokuapp.com/cars")
+      .get("https://limitless-temple-20432.herokuapp.com/cars")
       .then((res) => {
         console.log(res.data);
         setData(res.data);

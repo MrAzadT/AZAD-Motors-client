@@ -10,9 +10,7 @@ const Purchase = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://fathomless-woodland-69605.herokuapp.com/carsData/${carDataId}`
-      )
+      .get(`https://limitless-temple-20432.herokuapp.com/carsData/${carDataId}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data);

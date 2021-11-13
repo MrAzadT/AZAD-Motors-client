@@ -15,7 +15,7 @@ const Order = () => {
     console.log(data);
     data.email = currentUser.email;
     axios
-      .post("https://fathomless-woodland-69605.herokuapp.com/orders", data)
+      .post("https://limitless-temple-20432.herokuapp.com/orders", data)
       .then((res) => {
         console.log(res);
         alert("Your Order Submit");
