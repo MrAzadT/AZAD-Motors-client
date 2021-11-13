@@ -7,7 +7,7 @@ const ManageProducts = () => {
 
   useEffect(() => {
     axios
-      .get("https://limitless-temple-20432.herokuapp.com/cars")
+      .get("https://fathomless-woodland-69605.herokuapp.com/cars")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -20,7 +20,7 @@ const ManageProducts = () => {
   const handleDelete = (id) => {
     axios
       .delete(
-        `https://limitless-temple-20432.herokuapp.com/productDelete/${id}`
+        `https://fathomless-woodland-69605.herokuapp.com/productDelete/${id}`
       )
       .then((res) => {
         console.log(res);

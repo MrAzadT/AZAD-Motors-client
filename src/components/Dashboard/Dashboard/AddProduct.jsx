@@ -13,7 +13,7 @@ const AddProduct = () => {
     console.log(data);
 
     axios
-      .post("https://limitless-temple-20432.herokuapp.com/cars", data)
+      .post("https://fathomless-woodland-69605.herokuapp.com/cars", data)
       .then((res) => {
         console.log(res);
       })

@@ -7,7 +7,7 @@ const Reviews = () => {
 
   useEffect(() => {
     axios
-      .get("https://limitless-temple-20432.herokuapp.com/reviews")
+      .get("https://fathomless-woodland-69605.herokuapp.com/reviews")
       .then((res) => {
         console.log(res.data);
         setData(res.data);

@@ -7,7 +7,7 @@ const ManageOrders = () => {
 
   useEffect(() => {
     axios
-      .get("https://limitless-temple-20432.herokuapp.com/orders")
+      .get("https://fathomless-woodland-69605.herokuapp.com/orders")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,7 +19,9 @@ const ManageOrders = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://limitless-temple-20432.herokuapp.com/orderDelete/${id}`)
+      .delete(
+        `https://fathomless-woodland-69605.herokuapp.com/orderDelete/${id}`
+      )
       .then((res) => {
         console.log(res);
         setOrderChanged((prev) => !prev);
