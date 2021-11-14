@@ -5,7 +5,7 @@ const News = () => {
     <>
       <main className="relative container mx-auto bg-white px-4">
         <img
-          className=" w-3/5 m-auto mt-10 rounded-lg"
+          className=" lg:w-3/5 w-4/5  m-auto mt-10 rounded-lg"
           src="https://res.cloudinary.com/abidazad/image/upload/v1636709890/pexels-pixabay-358070_1_fafssj.jpg"
           alt=""
         />
@@ -54,7 +54,7 @@ const News = () => {
       </main>
       <main className="relative container mx-auto bg-white px-4">
         <img
-          className=" w-3/5 m-auto mt-10 rounded-lg"
+          className=" lg:w-3/5 w-4/5 m-auto mt-10 rounded-lg"
           src="https://res.cloudinary.com/abidazad/image/upload/v1636709891/pexels-garvin-st-villier-3311574_1_antcqu.jpg"
           alt=""
         />
@@ -101,7 +101,7 @@ const News = () => {
       </main>
       <main className="relative container mx-auto bg-white px-4">
         <img
-          className=" w-3/5 m-auto mt-10 rounded-lg"
+          className=" lg:w-3/5 w-4/5 m-auto mt-10 rounded-lg"
           src="https://res.cloudinary.com/abidazad/image/upload/v1636709891/pexels-mike-100656_1_jyeskh.jpg"
           alt=""
         />

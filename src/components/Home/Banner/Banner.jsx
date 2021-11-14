@@ -14,9 +14,14 @@ const Banner = () => {
               Find your perfect car
             </h1>
             <p className="mt-4 text-white">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quia
-              asperiores alias vero magnam recusandae adipisci ad vitae
-              laudantium quod rem voluptatem eos accusantium cumque.
+              Azad Motors, we understand how stressful buying a car can be for
+              people. That's why our friendly, knowledgeable, and professionally
+              certified sales staff will treat you with the respect and
+              consideration you deserve. We have an A+ rating with the Better
+              Business Bureau because the sales team at R.W. Motors takes a
+              consultative approach to sales. All you have to do is answer a few
+              questions, and a salesperson will guide you through our lot to
+              find the perfect vehicle to fit your needs and budget.
             </p>
             <div className="mt-8 w-40">
               <Link

@@ -42,10 +42,10 @@ function App() {
           <Route exact path="/moreCars">
             <MoreCars />
           </Route>
-          <PrivateRoute exact path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>
-          <PrivateRoute exact path="/admin">
+          <PrivateRoute path="/admin">
             <DashboardAdmin />
           </PrivateRoute>
           <Route exact path="/login">

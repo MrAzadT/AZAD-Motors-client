@@ -12,9 +12,10 @@ const Review = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://limitless-temple-20432.herokuapp.com/reviews", data)
+      .post("https://limitless-temple-20432.herokuapp.com/review", data)
       .then((res) => {
         console.log(res);
+        alert("Your Review Submit");
       })
       .catch((err) => {
         console.log(err);
